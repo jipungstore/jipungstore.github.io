@@ -14,32 +14,31 @@
 
 body{
     font-family:Arial, sans-serif;
-    background:#111;
     color:white;
+    background:#111;
 }
 
 .hero{
     min-height:100vh;
-    background-image:url("laut%20biru.jpeg");
+    background-image:url("Laut Biru.jpeg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
+    position:relative;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-
     text-align:center;
     padding:20px;
-    position:relative;
 }
 
 .hero::before{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.45);
+    background:rgba(0,0,0,0.5);
 }
 
 .hero h1,
@@ -50,12 +49,12 @@ body{
 }
 
 .hero h1{
-    font-size:56px;
+    font-size:60px;
     margin-bottom:15px;
 }
 
 .hero p{
-    font-size:20px;
+    font-size:22px;
     margin-bottom:20px;
 }
 
@@ -64,7 +63,7 @@ body{
     background:#25D366;
     color:white;
     text-decoration:none;
-    padding:14px 24px;
+    padding:14px 25px;
     border-radius:10px;
     font-weight:bold;
 }
@@ -77,13 +76,14 @@ body{
 
 .section h2{
     margin:30px 0 15px;
+    color:#00d4ff;
 }
 
 .card{
     background:#222;
-    margin:12px 0;
-    padding:15px;
     border-radius:12px;
+    padding:15px;
+    margin-bottom:12px;
     display:flex;
     align-items:center;
     gap:12px;
@@ -92,23 +92,23 @@ body{
 .icon{
     width:45px;
     height:45px;
-    object-fit:cover;
     border-radius:10px;
+    object-fit:cover;
 }
 
 .footer{
-    text-align:center;
-    padding:20px;
     background:#000;
     color:#aaa;
+    text-align:center;
+    padding:20px;
 }
 </style>
 </head>
+
 <body>
 
 <section class="hero">
     <h1>TOKO JIPUNG</h1>
-
     <p>Jasa Kreatif Digital & Pendampingan Personal</p>
 
     <a class="btn" href="https://wa.me/6285134662506" target="_blank">
@@ -122,7 +122,7 @@ body{
 
     <div class="card">
         <img src="download.jpeg" class="icon" alt="Alight Motion">
-        Edit Video Alight Motion
+        <span>Edit Video Alight Motion</span>
     </div>
 
     <div class="card">✨ Preset Alight Motion</div>
