@@ -1,487 +1,711 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-     <link rel="icon" type="image/png" href="file_00000000264871f8864c9711d233ac95.png">
-<link rel="shortcut icon" href="file_00000000264871f8864c9711d233ac95.png">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6030908529691502"
-     crossorigin="anonymous"></script>
-<meta name="google-site-verification" content="1Ofb7dyDE6VmmrE-iL2rubo_vGPIeIXlujyvuiQdS6I" />
-<meta name="google-adsense-account" content="ca-pub-6030908529691502">
-
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JIPUNG STORE</title>
-
+<title>Jipung Store — Jasa Desain, Konten & Teman Bertumbuh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+  :root{
+    --bg:#FFFFFF;
+    --bg-soft:#F4F7FC;
+    --ink:#1B2333;
+    --ink-dim:#69707D;
+    --blue:#2F6FEE;
+    --blue-deep:#1D4ED8;
+    --orange:#FF7A45;
+    --orange-deep:#E8632F;
+    --yellow:#FFB020;
+    --green:#22C55E;
+    --border:#E7EAF0;
+    --shadow:0 10px 30px rgba(27,35,51,0.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:'Sora', sans-serif; font-weight:700; letter-spacing:-0.01em;}
+  a{color:inherit; text-decoration:none;}
+  img{display:block;}
+  ::selection{background:var(--orange); color:#fff;}
 
-body{
-font-family:Arial,sans-serif;
-background:#fff;
-color:#222;
-overflow-x:hidden;
-}
+  .eyebrow{
+    font-size:0.75rem;
+    font-weight:700;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+  }
+  .eyebrow::before{content:'';width:22px;height:2px;background:var(--orange);display:inline-block;border-radius:2px;}
 
-.hero{
-min-height:100vh;
-background:url('beauty.jpeg') center center/cover no-repeat;
-position:relative;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
+  .stars{color:var(--yellow); font-size:0.85rem; letter-spacing:1px;}
 
-.hero::before{
-content:'';
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.55);
-}
+  .btn-orange{
+    display:inline-flex; align-items:center; gap:0.5rem;
+    background:var(--orange);
+    color:#fff;
+    font-weight:600;
+    padding:0.85rem 1.7rem;
+    border-radius:10px;
+    font-size:0.92rem;
+    border:none;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(255,122,69,0.35);
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+  }
+  .btn-orange:hover{transform:translateY(-2px); background:var(--orange-deep); box-shadow:0 12px 26px rgba(255,122,69,0.45);}
+  .btn-outline{
+    display:inline-flex; align-items:center; gap:0.5rem;
+    border:1.5px solid var(--border);
+    color:var(--ink);
+    font-weight:600;
+    padding:0.82rem 1.6rem;
+    border-radius:10px;
+    font-size:0.92rem;
+    transition:border-color .25s ease, background .25s ease;
+  }
+  .btn-outline:hover{border-color:var(--blue); background:var(--bg-soft);}
 
-.hero-content{
-position:relative;
-z-index:2;
-max-width:850px;
-padding:20px;
-}
+  /* ---------- TOP BAR ---------- */
+  .topbar{
+    background:linear-gradient(90deg, var(--blue), var(--blue-deep));
+    color:#fff;
+    text-align:center;
+    font-size:0.82rem;
+    font-weight:500;
+    padding:0.55rem 1rem;
+    letter-spacing:0.01em;
+  }
+  .topbar strong{color:var(--yellow);}
 
-.main-logo{
-width:500px;
-height:auto;
-}
-  
-.hero h1{
-font-size:70px;
-color:white;
-margin-bottom:20px;
-}
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1.1rem 5vw;
+  }
+  .logo{
+    font-family:'Sora', sans-serif;
+    font-weight:800;
+    font-size:1.25rem;
+    display:flex;
+    align-items:center;
+    gap:0.45rem;
+  }
+  .logo .mark{
+    width:30px;height:30px;
+    border-radius:9px;
+    background:linear-gradient(135deg, var(--blue), var(--orange));
+    display:inline-block;
+  }
+  nav ul{list-style:none; display:flex; gap:2.1rem; font-size:0.9rem; font-weight:500;}
+  nav a{color:var(--ink-dim); transition:color .25s ease;}
+  nav a:hover{color:var(--blue);}
+  .menu-toggle{display:none; background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--ink);}
 
-.hero p{
-font-size:22px;
-color:white;
-margin-bottom:30px;
-}
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--bg-soft);
+    padding:5rem 5vw 7rem;
+    text-align:center;
+    position:relative;
+  }
+  .hero h1{
+    font-size:clamp(2.2rem, 4.6vw, 3.6rem);
+    line-height:1.15;
+    max-width:16ch;
+    margin:1.2rem auto 1.3rem;
+  }
+  .hero h1 .accent{color:var(--orange);}
+  .hero p.lead{
+    color:var(--ink-dim);
+    font-size:1.05rem;
+    max-width:52ch;
+    margin:0 auto 2.2rem;
+  }
+  .hero-ctas{display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:2.6rem;}
+  .trust-row{
+    display:flex; align-items:center; justify-content:center; gap:0.9rem;
+    font-size:0.85rem; color:var(--ink-dim); flex-wrap:wrap;
+  }
+  .avatar-stack{display:flex;}
+  .avatar-stack span{
+    width:30px;height:30px;border-radius:50%;
+    border:2px solid #fff;
+    background:linear-gradient(135deg, var(--blue), var(--orange));
+    margin-left:-10px;
+    display:inline-block;
+  }
+  .avatar-stack span:first-child{margin-left:0;}
 
-.btn{
-display:inline-block;
-padding:15px 35px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:bold;
-}
-
-.section{
-max-width:1200px;
-margin:auto;
-padding:80px 20px;
-}
-
-.section-title{
-text-align:center;
-font-size:42px;
-margin-bottom:50px;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.1);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card img{
-width:100%;
-height:230px;
-object-fit:cover;
-display:block;
-}
-
-.card-content{
-padding:20px;
-}
-
-.card h3{
-margin-bottom:10px;
-}
-
-.video-box{
-max-width:900px;
-margin:auto;
-}
-
-.video-box video{
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.portfolio{
-max-width:1000px;
-margin:auto;
-}
-
-.portfolio img{
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.feature{
-background:#f5f7ff;
-padding:25px;
-border-radius:15px;
-text-align:center;
-}
-
-.cta{
-background:#111827;
-color:white;
-text-align:center;
-padding:80px 20px;
-}
-
-.cta h2{
-font-size:42px;
-margin-bottom:20px;
-}
-
-.payment-bar{
-background:#081120;
-overflow:hidden;
-padding:20px 0;
-}
-
-.payment-track{
-display:flex;
-align-items:center;
-gap:80px;
-width:max-content;
-animation:slide 35s linear infinite;
-}
-
-.payment-track img{
-height:45px;
-width:auto;
-}
-
-@keyframes slide{
-0%{
-transform:translateX(-100%);
-}
-100%{
-transform:translateX(calc(100vw + 100%));
-}
-}
-
-.footer{
-background:#000;
-color:#aaa;
-text-align:center;
-padding:25px;
-}
-
-@media(max-width:768px){
-.main-logo{
-width:280px;
-}
+  .service-strip{
+    display:flex;
+    justify-content:center;
+    gap:0.9rem;
+    flex-wrap:wrap;
+    margin-top:2.6rem;
+  }
+  .service-strip span{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:0.5rem 1.1rem;
+    font-size:0.8rem;
+    font-weight:600;
+    color:var(--ink-dim);
+    box-shadow:var(--shadow);
   }
 
-.hero h1{
-font-size:42px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.main-logo{
-width:350px;
-}
-
-.section-title{
-font-size:32px;
-}
-
-.card img{
-height:200px;
-}
-
-.payment-track img{
-height:35px;
-}
-
-.feedback-section{
-max-width:700px;
-margin:60px auto;
-padding:25px;
-background:#fff;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
-}
-
-.feedback-section input,
-.feedback-section textarea{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:1px solid #ccc;
-border-radius:10px;
-box-sizing:border-box;
-}
-
-.feedback-section button{
-padding:12px 25px;
-border:none;
-border-radius:10px;
-cursor:pointer;
-font-size:16px;
+  /* ---------- STATS CARD (overlaps hero) ---------- */
+  .stats-card{
+    background:#fff;
+    max-width:1000px;
+    margin:-3.6rem auto 0;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:2.2rem 1rem;
+    position:relative;
+    z-index:2;
   }
-  
-}
+  .stats-card div{text-align:center; border-right:1px solid var(--border);}
+  .stats-card div:last-child{border-right:none;}
+  .stats-card strong{
+    display:block;
+    font-family:'Sora', sans-serif;
+    font-size:1.9rem;
+    font-weight:800;
+    color:var(--blue);
+  }
+  .stats-card span{font-size:0.78rem; color:var(--ink-dim); font-weight:500;}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:6.5rem 5vw;}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:3rem;
+    flex-wrap:wrap;
+    gap:1rem;
+  }
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.3rem); margin-top:0.6rem;}
+  .section-head .see-all{
+    font-size:0.88rem; font-weight:600; color:var(--blue);
+    display:flex; align-items:center; gap:0.3rem;
+  }
+
+  /* ---------- SERVICE CARDS ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:1.5rem;
+  }
+  .service-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:transform .3s ease, box-shadow .3s ease;
+    display:flex;
+    flex-direction:column;
+  }
+  .service-card:hover{transform:translateY(-6px); box-shadow:0 18px 40px rgba(27,35,51,0.12);}
+  .card-media{
+    height:110px;
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .card-media svg{width:34px;height:34px; stroke:#fff; fill:none; stroke-width:1.6;}
+  .ribbon{
+    position:absolute; top:10px; left:10px;
+    background:var(--orange);
+    color:#fff;
+    font-size:0.65rem;
+    font-weight:700;
+    padding:0.25rem 0.6rem;
+    border-radius:999px;
+    letter-spacing:0.03em;
+  }
+  .card-body{padding:1.3rem 1.4rem 1.5rem; display:flex; flex-direction:column; gap:0.6rem; flex-grow:1;}
+  .card-body h3{font-size:1.02rem;}
+  .card-body p{font-size:0.84rem; color:var(--ink-dim); flex-grow:1;}
+  .card-foot{
+    display:flex; justify-content:space-between; align-items:center;
+    border-top:1px solid var(--border);
+    padding-top:0.9rem;
+    margin-top:0.3rem;
+  }
+  .price{font-family:'Sora', sans-serif; font-weight:700; font-size:0.95rem; color:var(--ink);}
+  .price small{display:block; font-size:0.68rem; font-weight:500; color:var(--ink-dim);}
+  .mini-order{
+    font-size:0.78rem; font-weight:700; color:var(--blue);
+    border:1px solid var(--blue);
+    padding:0.45rem 0.9rem;
+    border-radius:8px;
+    transition:background .25s ease, color .25s ease;
+  }
+  .mini-order:hover{background:var(--blue); color:#fff;}
+
+  /* ---------- WHY GRID ---------- */
+  .why-section{background:var(--bg-soft);}
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1.6rem;
+  }
+  .why-card{
+    background:#fff;
+    border-radius:16px;
+    padding:1.8rem;
+    border:1px solid var(--border);
+    display:flex;
+    gap:1rem;
+    align-items:flex-start;
+  }
+  .why-icon{
+    width:44px;height:44px;
+    border-radius:12px;
+    background:var(--bg-soft);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .why-icon svg{width:22px;height:22px;stroke:var(--blue); fill:none; stroke-width:1.7;}
+  .why-card h3{font-size:1rem; margin-bottom:0.35rem;}
+  .why-card p{font-size:0.85rem; color:var(--ink-dim);}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.5rem;
+  }
+  .testi-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:1.7rem;
+    box-shadow:var(--shadow);
+  }
+  .testi-card p{font-size:0.9rem; color:var(--ink); margin:0.8rem 0 1.2rem;}
+  .testi-who{display:flex; align-items:center; gap:0.7rem;}
+  .testi-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg, var(--blue), var(--orange));}
+  .testi-who strong{display:block; font-size:0.86rem;}
+  .testi-who span{font-size:0.75rem; color:var(--ink-dim);}
+
+  /* ---------- CTA BANNER ---------- */
+  .cta-banner{
+    background:linear-gradient(120deg, var(--blue), var(--blue-deep));
+    border-radius:24px;
+    margin:0 5vw;
+    padding:3.6rem 3rem;
+    text-align:center;
+    color:#fff;
+  }
+  .cta-banner h2{font-size:clamp(1.7rem,3vw,2.4rem); margin-bottom:0.8rem;}
+  .cta-banner p{color:rgba(255,255,255,0.85); max-width:48ch; margin:0 auto 1.8rem;}
+
+  /* ---------- PORTFOLIO LIST ---------- */
+  .portfolio-list{
+    border-top:1px solid var(--border);
+  }
+  .portfolio-row{
+    display:grid;
+    grid-template-columns:70px 1fr auto;
+    gap:1.2rem;
+    align-items:center;
+    padding:1.1rem 0;
+    border-bottom:1px solid var(--border);
+  }
+  .portfolio-thumb{
+    width:70px;height:52px;
+    border-radius:10px;
+    background:linear-gradient(135deg, var(--blue), var(--orange));
+    opacity:0.85;
+  }
+  .portfolio-row h4{font-size:0.94rem; margin-bottom:0.2rem;}
+  .portfolio-row span.tag{font-size:0.76rem; color:var(--ink-dim);}
+  .portfolio-row .date{font-size:0.78rem; color:var(--ink-dim); font-family:'Inter',sans-serif;}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);
+    color:#C6CCDA;
+    padding:4rem 5vw 2rem;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1.1fr;
+    gap:2.5rem;
+    padding-bottom:2.5rem;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+  .footer-grid .logo{color:#fff;}
+  .footer-grid p{font-size:0.85rem; margin-top:1rem; max-width:32ch; color:#9AA2B5;}
+  .footer-col h4{color:#fff; font-size:0.88rem; margin-bottom:1rem;}
+  .footer-col ul{list-style:none; display:flex; flex-direction:column; gap:0.7rem; font-size:0.85rem;}
+  .footer-col a{color:#9AA2B5; transition:color .25s ease;}
+  .footer-col a:hover{color:#fff;}
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    padding-top:1.6rem;
+    font-size:0.78rem;
+    color:#7C8296;
+    flex-wrap:wrap;
+    gap:1rem;
+  }
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  .wa-float{
+    position:fixed;
+    bottom:1.6rem; right:1.6rem;
+    z-index:200;
+    width:58px;height:58px;
+    border-radius:50%;
+    background:var(--green);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 26px rgba(34,197,94,0.45);
+    animation:pulseWa 2.4s ease-in-out infinite;
+  }
+  .wa-float svg{width:28px;height:28px; fill:#fff;}
+  @keyframes pulseWa{0%,100%{transform:scale(1);}50%{transform:scale(1.07);}}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0; transform:translateY(20px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){*{animation:none !important; transition:none !important;} .reveal{opacity:1; transform:none;}}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:1000px){
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:1fr 1fr;}
+    .testi-grid{grid-template-columns:1fr;}
+    .stats-card{grid-template-columns:repeat(2,1fr); gap:1.2rem;}
+    .stats-card div{border-right:none; border-bottom:1px solid var(--border); padding-bottom:1rem;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    nav ul{display:none;}
+    .menu-toggle{display:block;}
+    .services-grid, .why-grid{grid-template-columns:1fr;}
+    section{padding:4.5rem 6vw;}
+    .cta-banner{margin:0 6vw; padding:2.6rem 1.6rem;}
+    .footer-grid{grid-template-columns:1fr;}
+    .portfolio-row{grid-template-columns:54px 1fr; row-gap:0.3rem;}
+    .portfolio-row .date{grid-column:2; }
+  }
 </style>
-
 </head>
 <body>
 
-<section class="hero">
+<div class="topbar">✨ Slot terbatas minggu ini — chat sekarang biar <strong>nggak kehabisan jadwal!</strong></div>
 
-<div class="hero-content">
+<header>
+  <div class="logo"><span class="mark"></span>Jipung Store</div>
+  <nav>
+    <ul>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#kenapa">Kenapa Kami</a></li>
+      <li><a href="#testimoni">Testimoni</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+  <a href="#kontak" class="btn-orange">Pesan via WhatsApp</a>
+  <button class="menu-toggle" aria-label="Buka menu">&#9776;</button>
+</header>
 
-<img src="file_00000000264871f8864c9711d233ac95.png" class="main-logo" alt="Logo JIPUNG STORE">
-     
-<h1>JIPUNG STORE</h1>
-
-<p>
-Jasa Kreatif Digital & Pendampingan Personal untuk meningkatkan
-  motivasi semangat hidup anda.
-</p>
-
-<a href="https://wa.me/6285134662506?text=Saya%20ingin%20berlangganan%20salah%20satu%20jasa%20anda" class="btn">
-Hubungi WhatsApp
-</a>
-
-</div>
-
+<section class="hero" style="padding-bottom:9rem;">
+  <span class="eyebrow" style="justify-content:center;">Jipung Store · Kreatif & Personal</span>
+  <h1>Satu tempat untuk karya visualmu, <span class="accent">sampai isi hatimu.</span></h1>
+  <p class="lead">Logo, foto, video, preset Alight Motion, website — sampai teman curhat dan pendampingan healing. Semua kebutuhan kamu, kami bantu dengan sepenuh hati.</p>
+  <div class="hero-ctas">
+    <a href="#kontak" class="btn-orange">Chat & Pesan Sekarang</a>
+    <a href="#layanan" class="btn-outline">Lihat Semua Layanan</a>
+  </div>
+  <div class="trust-row">
+    <span>💬 Konsultasi gratis sebelum order — chat dulu, order kalau cocok</span>
+  </div>
+  <div class="service-strip">
+    <span>🎨 Desain Logo</span>
+    <span>📸 Jasa Foto</span>
+    <span>🎬 Edit Video</span>
+    <span>✨ Preset Alight Motion</span>
+    <span>💬 Teman Curhat</span>
+    <span>🌿 Healing & Liburan</span>
+    <span>💻 Pembuatan Website</span>
+  </div>
 </section>
 
-<section class="section">
-
-<h2 class="section-title">Layanan Kami</h2>
-
-<div class="services">
-
-<div class="card">
-<img src="Alightmotion.jpeg" alt="Alight Motion">
-<div class="card-content">
-<h3>Edit Video Alight Motion</h3>
-<p>Edit video, preset, motion graphic, dan efek visual profesional dan bukan hanya itu kami juga bisa membuat portofolio.</p>
-</div>
+<div class="stats-card reveal">
+  <div><strong>7</strong><span>Layanan Tersedia</span></div>
+  <div><strong>Gratis</strong><span>Konsultasi Awal</span></div>
+  <div><strong>1x24 jam</strong><span>Target Respon Chat</span></div>
+  <div><strong>100%</strong><span>Dikerjakan Langsung</span></div>
 </div>
 
-<div class="card">
-<img src="Curhat.jpeg" alt="Teman Curhat">
-<div class="card-content">
-<h3>Teman Curhat</h3>
-<p>Tempat berbagi cerita, diskusi, dan konsultasi ringan sangat tidak baik jika anda menahan emosi
-  dalam diri hingga bertahun-tahun dan itu akan sangat mempengaruhi masa depan Anda 
-  ceritakan semua pada kami dan kami akan mendengarkan sekaligus memberi motivasi dan privasi Anda 100% aman
-  hanya kita berdua yang tahu, ayo cerita.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="Liburan.jpeg" alt="Pendamping Healing">
-<div class="card-content">
-<h3>Pendamping Healing</h3>
-<p>Pendamping aktivitasmu ketik ingin berlibur tapi tidak punya teman atau sedang ingin berdua tidak masalah 
-  kami akan menemani anda berlibur tentu dengan sesuai prosedur ke amanan kami dan liburan ini sangat penting ketika anda
-  terlalu fokus pada kerjaan atau kesibukan anda sehingga anda merasa seperti merasa capek setiap 
-  waktu dan ini sangat membantu jiwa anda agar lebih memilih bersama alam dan menikmati nya
-  mari berlibur bersama.</p>
-</div>
-</div>
-
-</div>
-
+<section id="layanan">
+  <div class="section-head reveal">
+    <div>
+      <span class="eyebrow">Layanan Kami</span>
+      <h2>Layanan Favorit Minggu Ini</h2>
+    </div>
+    <a href="#kontak" class="see-all">Chat Sekarang →</a>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="card-media" style="background:linear-gradient(135deg,#2F6FEE,#5B8CFF);">
+        <svg viewBox="0 0 24 24"><path d="M4 20 L14 4 L20 10 L8 20 Z"/><path d="M13 6 L18 11"/></svg>
+      </div>
+      <div class="card-body">
+        <h3>Desain Logo</h3>
+        <p>Logo custom untuk brand atau personal kamu, lengkap file siap pakai.</p>
+        <div class="card-foot">
+          <span class="price">Rp 50.000<small>mulai dari</small></span>
+          <a href="#kontak" class="mini-order">Pesan</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="card-media" style="background:linear-gradient(135deg,#FF7A45,#FFB07A);">
+        <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7 L10 4 h4 l2 3"/><circle cx="12" cy="13.5" r="3.2"/></svg>
+      </div>
+      <div class="card-body">
+        <h3>Jasa Foto</h3>
+        <p>Sesi foto produk, potret, atau konten media sosial dengan hasil rapi.</p>
+        <div class="card-foot">
+          <span class="price">Rp 100.000<small>mulai dari</small></span>
+          <a href="#kontak" class="mini-order">Pesan</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="card-media" style="background:linear-gradient(135deg,#22C55E,#6EE7A0);">
+        <svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M17 10 L21 8 v8 l-4 -2 Z"/></svg>
+      </div>
+      <div class="card-body">
+        <h3>Edit Video</h3>
+        <p>Editing video konten sosmed, dokumentasi, atau promosi — enak ditonton.</p>
+        <div class="card-foot">
+          <span class="price">Rp 75.000<small>mulai dari</small></span>
+          <a href="#kontak" class="mini-order">Pesan</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="card-media" style="background:linear-gradient(135deg,#A855F7,#D6A6FF);">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8 L16 12 L10 16 Z"/></svg>
+      </div>
+      <div class="card-body">
+        <h3>Preset Alight Motion</h3>
+        <p>Preset siap pakai, transisi dan color grading yang aesthetic.</p>
+        <div class="card-foot">
+          <span class="price">Rp 15.000<small>mulai dari</small></span>
+          <a href="#kontak" class="mini-order">Pesan</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="card-media" style="background:linear-gradient(135deg,#F472B6,#FCA5D2);">
+        <svg viewBox="0 0 24 24"><path d="M4 5 h16 v10 H9 l-4 4 V15 H4 Z"/></svg>
+      </div>
+      <div class="card-body">
+        <h3>Jasa Teman Curhat</h3>
+        <p>Ruang cerita tanpa dihakimi, ngobrol santai kapan aja kamu butuh.</p>
+        <div class="card-foot">
+          <span class="price">Rp 25.000<small>per sesi</small></span>
+          <a href="#kontak" class="mini-order">Pesan</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="card-media" style="background:linear-gradient(135deg,#0EA5E9,#7DD3FC);">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M4 20 c1 -5 5 -7 8 -7 s7 2 8 7"/></svg>
+      </div>
+      <div class="card-body">
+        <h3>Pendampingan Healing & Liburan</h3>
+        <p>Teman jalan buat healing atau liburan, biar nggak sendirian.</p>
+        <div class="card-foot">
+          <span class="price">Nego<small>sesuai lokasi</small></span>
+          <a href="#kontak" class="mini-order">Pesan</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="card-media" style="background:linear-gradient(135deg,#14B8A6,#5EEAD4);">
+        <svg viewBox="0 0 24 24"><path d="M8 8 L4 12 L8 16"/><path d="M16 8 L20 12 L16 16"/><path d="M13 6 L11 18"/></svg>
+      </div>
+      <div class="card-body">
+        <h3>Jasa Pembuatan Website</h3>
+        <p>Website portofolio, toko online, atau landing page, siap online.</p>
+        <div class="card-foot">
+          <span class="price">Rp 150.000<small>mulai dari</small></span>
+          <a href="#kontak" class="mini-order">Pesan</a>
+        </div>
+      </div>
+    </div>
+    <div class="service-card reveal" style="justify-content:center; align-items:center; text-align:center; padding:2rem;">
+      <div class="card-body" style="align-items:center;">
+        <h3>Nggak nemu yang kamu cari?</h3>
+        <p>Chat aja, siapa tahu bisa kami bantu juga.</p>
+        <a href="#kontak" class="btn-orange" style="margin-top:0.6rem;">Tanya Dulu</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="section">
-
-<h2 class="section-title">🎬 ini adalah salah satu portofolio editing video preset dari alight motion 
-dan kedepannya kami akan memberikan portofolio yang lebih banyak dari sebelumnya</h2>
-
-<div class="video-box">
-
-<video controls>
-<source src="Video.mp4" type="video/mp4">
-</video>
-
-</div>
-
+<section class="why-section" id="kenapa">
+  <div class="section-head reveal" style="justify-content:center; text-align:center; flex-direction:column; align-items:center;">
+    <span class="eyebrow">Kenapa Harus Kami</span>
+    <h2>Dipercaya karena kualitas & ketulusan</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2 L21 6 v6 c0 5 -4 8 -9 10 c-5 -2 -9 -5 -9 -10 V6 Z"/></svg></div>
+      <div><h3>Privasi Terjaga</h3><p>Khusus jasa curhat & healing, ceritamu aman dan tidak kami sebar.</p></div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12 l3 3 l6 -7"/></svg></div>
+      <div><h3>Hasil Berkualitas</h3><p>Setiap pesanan dikerjakan teliti sampai kamu puas dengan hasilnya.</p></div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7 v5 l3.5 2"/></svg></div>
+      <div><h3>Respon Cepat</h3><p>Chat kamu dibalas maksimal 1x24 jam, seringnya jauh lebih cepat.</p></div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M3 12 h18 M3 12 c0 -5 4 -9 9 -9 s9 4 9 9 M3 12 c0 5 4 9 9 9 s9 -4 9 -9"/></svg></div>
+      <div><h3>Harga Bersahabat</h3><p>Tarif jelas dari awal, tanpa biaya tersembunyi di tengah jalan.</p></div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M9 11 l3 3 l8 -8"/><path d="M20 12 v6 a2 2 0 0 1 -2 2 H6 a2 2 0 0 1 -2 -2 V6 a2 2 0 0 1 2 -2 h10"/></svg></div>
+      <div><h3>Konsultasi Gratis</h3><p>Diskusi kebutuhan dulu sebelum deal, nggak ada paksaan order.</p></div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M4 4 h16 v12 H8 l-4 4 Z"/></svg></div>
+      <div><h3>Revisi Fleksibel</h3><p>Belum sreg? Bisa revisi sampai hasilnya sesuai keinginan kamu.</p></div>
+    </div>
+  </div>
 </section>
 
-<section class="section">
-
-<h2 class="section-title">🎨 Portofolio Desain Logo</h2>
-
-<div class="portfolio">
-
-<img src="Desain.png" alt="Portofolio Desain">
-
-</div>
-
+<section id="testimoni">
+  <div class="section-head reveal" style="justify-content:center; text-align:center; flex-direction:column; align-items:center;">
+    <span class="eyebrow">Testimoni</span>
+    <h2>Jadilah Klien Pertama Kami</h2>
+  </div>
+  <div class="testi-card reveal" style="max-width:560px; margin:0 auto; text-align:center;">
+    <p style="margin-top:0;">Jipung Store baru mulai melayani, jadi belum ada testimoni untuk ditampilkan di sini — dan kami nggak mau pasang testimoni palsu cuma biar kelihatan ramai.</p>
+    <p>Kalau kamu order sekarang, ceritamu bisa jadi testimoni pertama di sini (dengan izin kamu tentunya).</p>
+    <a href="#kontak" class="btn-orange" style="margin-top:0.6rem;">Jadi Klien Pertama</a>
+  </div>
 </section>
 
-<section class="section">
-
-<h2 class="section-title">Kenapa Memilih JIPUNG STORE?</h2>
-
-<div class="features">
-
-<div class="feature">
-<h3>⚡ Cepat</h3>
-<p>Pengerjaan cepat dan tepat waktu serta kami akan memberikan diskon kepada orang
-  yang beruntung.</p>
-</div>
-
-<div class="feature">
-<h3>🎨 Kreatif</h3>
-<p>Desain modern dan menarik cocok untuk portofolio anda atau tugas sekolah anda.</p>
-</div>
-
-<div class="feature">
-<h3>💬 Responsif</h3>
-<p>Mudah dihubungi melalui WhatsApp dan tentu ini sangat mudah karena terhubung langsung dengan admin.</p>
-</div>
-
-<div class="feature">
-<h3>💳 Fleksibel</h3>
-<p>Mendukung pembayaran digital tentu ini sangat mudah bagi anda karena kami menyediakan berbagai jalur pembayaran.</p>
-</div>
-
-</div>
-
+<section>
+  <div class="cta-banner reveal">
+    <h2>Mulai konsultasi gratis sekarang</h2>
+    <p>Ceritain kebutuhan kamu — mau proyek desain atau sekadar butuh teman cerita, kami siap dengar.</p>
+    <a href="#kontak" class="btn-orange" style="background:#fff; color:var(--blue-deep); box-shadow:none;">Chat via WhatsApp</a>
+  </div>
 </section>
 
-<section class="cta">
-
-<h2>Siap Memulai?</h2>
-
-<p>Hubungi JIPUNG STORE sekarang juga.</p>
-
-<br><br>
-
-<a href="https://wa.me/6285134662506?text=Saya%20ingin%20berlangganan%20salah%20satu%20jasa%20anda" class="btn">
-Chat WhatsApp
-</a>
-
+<section id="portofolio">
+  <div class="section-head reveal">
+    <div><span class="eyebrow">Contoh Gaya Kerja</span><h2>Gambaran Hasil yang Bisa Kamu Dapat</h2></div>
+  </div>
+  <p class="reveal" style="color:var(--ink-dim); margin-top:-1.5rem; margin-bottom:2rem; max-width:60ch;">Ini contoh gaya/mockup untuk menggambarkan jenis hasil kerja tiap layanan — bukan daftar order klien asli. Portofolio nyata akan kami tambahkan setelah ada hasil kerja pertama.</p>
+  <div class="portfolio-list reveal">
+    <div class="portfolio-row">
+      <span class="portfolio-thumb"></span>
+      <div><h4>Contoh gaya: Logo brand minimalis</h4><span class="tag">Desain Logo</span></div>
+      <span class="date">Mockup</span>
+    </div>
+    <div class="portfolio-row">
+      <span class="portfolio-thumb" style="background:linear-gradient(135deg,#FF7A45,#FFB07A);"></span>
+      <div><h4>Contoh gaya: Foto produk untuk sosmed</h4><span class="tag">Jasa Foto</span></div>
+      <span class="date">Mockup</span>
+    </div>
+    <div class="portfolio-row">
+      <span class="portfolio-thumb" style="background:linear-gradient(135deg,#22C55E,#6EE7A0);"></span>
+      <div><h4>Contoh gaya: Video promosi singkat</h4><span class="tag">Edit Video</span></div>
+      <span class="date">Mockup</span>
+    </div>
+    <div class="portfolio-row">
+      <span class="portfolio-thumb" style="background:linear-gradient(135deg,#14B8A6,#5EEAD4);"></span>
+      <div><h4>Contoh gaya: Website portofolio sederhana</h4><span class="tag">Pembuatan Website</span></div>
+      <span class="date">Mockup</span>
+    </div>
+  </div>
 </section>
 
-<section class="payment-bar">
-
-<div class="payment-track">
-
-<img src="Paypal.png">
-<img src="Dana.png">
-<img src="Seabank.png">
-
-<img src="Paypal.png">
-<img src="Dana.png">
-<img src="Seabank.png">
-
-<img src="Paypal.png">
-<img src="Dana.png">
-<img src="Seabank.png">
-
-<img src="Paypal.png">
-<img src="Dana.png">
-<img src="Seabank.png">
-
-</div>
-
-</section>
-<section class="feedback-section">
-<h2>📝 Saran & Masukan</h2>
-<p>Kami menghargai setiap masukan untuk meningkatkan layanan Jipungstore.</p>
-
-<form action="https://formspree.io/f/mykrgzbj" method="POST">
-
-<input
-type="text"
-name="nama"
-placeholder="Masukkan Nama"
-required>
-
-<input
-type="email"
-name="email"
-placeholder="Masukkan Gmail"
-required>
-
-<textarea
-name="saran"
-placeholder="Tulis saran atau masukan Anda..."
-rows="5"
-required></textarea>
-
-<button type="submit">Kirim</button>
-
-</form>
-</section>
-<h2>📚 Artikel & Tips</h2>
-
-<div style="background:white;padding:20px;border-radius:15px;margin-top:15px;">
-    <h3>Tips Membuat Thumbnail YouTube yang Menarik</h3>
-    <p>
-        Pelajari cara membuat thumbnail YouTube yang menarik perhatian,
-        meningkatkan jumlah klik, dan membantu video mendapatkan lebih banyak penonton.
-    </p>
-    <a href="thumbnail-youtube.html">Baca Selengkapnya →</a>
-</div>
-
-<div style="background:white;padding:20px;border-radius:15px;margin-top:15px;">
-    <h3>Mengenal Alight Motion untuk Edit Video Profesional</h3>
-    <p>
-        Pelajari fitur Alight Motion, keunggulannya, serta berbagai tips
-        membuat video yang lebih menarik dan profesional untuk media sosial.
-    </p>
-    <a href="alight-motion.html">Baca Selengkapnya →</a>
-</div>
-
-<footer class="footer">
-
-<a href="contact.html">Kontak</a> |
-  
-<a href="about.html">Tentang Kami</a>
-  
-<a href="privacy.html">Kebijakan Privasi</a>
-  
-© 2026 JIPUNG STORE
+<footer id="kontak">
+  <div class="footer-grid">
+    <div>
+      <div class="logo"><span class="mark"></span>Jipung Store</div>
+      <p>Satu tempat untuk kebutuhan desain, konten, website — sampai ruang cerita dan healing kamu. Chat kapan aja, kami dengar.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="#layanan">Desain Logo</a></li>
+        <li><a href="#layanan">Jasa Foto & Video</a></li>
+        <li><a href="#layanan">Preset Alight Motion</a></li>
+        <li><a href="#layanan">Pembuatan Website</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Personal</h4>
+      <ul>
+        <li><a href="#layanan">Jasa Teman Curhat</a></li>
+        <li><a href="#layanan">Pendampingan Healing</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
+        <li><a href="#kenapa">Kenapa Kami</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontak</h4>
+      <ul>
+        <li>WhatsApp: 08xx-xxxx-xxxx</li>
+        <li>Email: halo@jipungstore.id</li>
+        <li>Instagram: @jipungstore</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Jipung Store.</span>
+    <span>Dibuat dengan ❤️ untuk kamu yang butuh karya & teman cerita.</span>
+  </div>
 </footer>
 
+<a href="#" class="wa-float" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.3c-.2.6-1.3 1.2-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.8-4.2-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.5 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.5.2.5.3.1.2.1.6-.1 1.2z"/></svg>
+</a>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+</script>
+
 </body>
-  </html>
+</html>
