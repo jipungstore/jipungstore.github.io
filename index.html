@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jipung Store — Jasa Desain, Konten & Teman Bertumbuh</title>
+<link rel="icon" type="image/png" href="file_00000000264871f8864c9711d233ac95.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -108,10 +109,11 @@
     gap:0.45rem;
   }
   .logo .mark{
-    width:30px;height:30px;
-    border-radius:9px;
-    background:linear-gradient(135deg, var(--blue), var(--orange));
+    width:36px;height:36px;
+    border-radius:0;
+    object-fit:contain;
     display:inline-block;
+    vertical-align:middle;
   }
   nav ul{list-style:none; display:flex; gap:2.1rem; font-size:0.9rem; font-weight:500;}
   nav a{color:var(--ink-dim); transition:color .25s ease;}
@@ -413,6 +415,94 @@
     .portfolio-row{grid-template-columns:54px 1fr; row-gap:0.3rem;}
     .portfolio-row .date{grid-column:2; }
   }
+
+  /* ---------- MERGED SECTIONS (Tentang / Kontak / Privasi) ---------- */
+  .inner-hero{
+    background:var(--bg-soft);
+    padding:4rem 5vw 3.4rem;
+    text-align:center;
+    border-radius:24px;
+    margin:0 5vw 1rem;
+  }
+  .inner-hero h2{font-size:clamp(1.9rem,3.6vw,2.7rem); margin-top:1rem;}
+  .inner-hero p{color:var(--ink-dim); max-width:60ch; margin:1rem auto 0; font-size:1rem;}
+
+  .prose{max-width:760px; margin:0 auto;}
+  .prose h3{font-size:1.3rem; margin:2.2rem 0 0.9rem; font-family:'Sora',sans-serif; font-weight:700;}
+  .prose h3:first-child{margin-top:0;}
+  .prose p{color:var(--ink-dim); margin-bottom:1rem; font-size:0.97rem;}
+  .prose ul{color:var(--ink-dim); margin:0 0 1.2rem 1.2rem; font-size:0.97rem; display:flex; flex-direction:column; gap:0.55rem;}
+  .prose strong{color:var(--ink);}
+  .update-date{text-align:center; font-size:0.82rem; color:var(--ink-dim); margin-bottom:2.5rem;}
+
+  .value-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:1000px; margin:0 auto;}
+  .value-card{background:#fff; border:1px solid var(--border); border-radius:16px; padding:1.8rem; box-shadow:var(--shadow);}
+  .value-card h4{font-size:1.02rem; margin-bottom:0.5rem; font-family:'Sora',sans-serif;}
+  .value-card p{color:var(--ink-dim); font-size:0.87rem;}
+
+  .contact-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:1000px; margin:0 auto 3rem;}
+  .contact-card{background:#fff; border:1px solid var(--border); border-radius:16px; padding:2rem; text-align:center; box-shadow:var(--shadow);}
+  .contact-card .why-icon{margin:0 auto 1rem;}
+  .contact-card h4{font-size:1.02rem; margin-bottom:0.4rem; font-family:'Sora',sans-serif;}
+  .contact-card p{color:var(--ink-dim); font-size:0.87rem; margin-bottom:1rem;}
+
+  .founder-block{
+    max-width:760px; margin:0 auto 3.5rem; background:#fff; border:1px solid var(--border);
+    border-radius:18px; padding:2.4rem; box-shadow:var(--shadow); display:flex; gap:1.6rem; align-items:center;
+  }
+  .founder-avatar{width:64px;height:64px;border-radius:50%; background:linear-gradient(135deg, var(--blue), var(--orange)); flex-shrink:0;}
+  .founder-block h4{font-size:1.05rem; margin-bottom:0.3rem; font-family:'Sora',sans-serif;}
+  .founder-block p{color:var(--ink-dim); font-size:0.88rem;}
+
+  @media (max-width:900px){
+    .value-grid, .contact-grid{grid-template-columns:1fr;}
+    .founder-block{flex-direction:column; text-align:center;}
+  }
+
+  /* ---------- SARAN & KRITIK FORM ---------- */
+  .form-section{background:var(--bg-soft);}
+  .form-wrap{
+    max-width:680px;
+    margin:0 auto;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:2.8rem;
+    box-shadow:var(--shadow);
+  }
+  .form-field{display:flex; flex-direction:column; gap:0.45rem; margin-bottom:1.4rem;}
+  .form-field label{font-size:0.82rem; font-weight:600; color:var(--ink); letter-spacing:0.02em; text-transform:uppercase;}
+  .form-field input,
+  .form-field textarea,
+  .form-field select{
+    border:1.5px solid var(--border);
+    border-radius:10px;
+    padding:0.75rem 1rem;
+    font-family:'Inter',sans-serif;
+    font-size:0.95rem;
+    color:var(--ink);
+    background:#fff;
+    outline:none;
+    transition:border-color .25s ease, box-shadow .25s ease;
+  }
+  .form-field input:focus,
+  .form-field textarea:focus,
+  .form-field select:focus{
+    border-color:var(--blue);
+    box-shadow:0 0 0 3px rgba(47,111,238,0.12);
+  }
+  .form-field textarea{resize:vertical; min-height:120px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:1rem;}
+  .form-success{
+    display:none;
+    text-align:center;
+    padding:2rem;
+    color:var(--green);
+    font-weight:600;
+    font-size:1rem;
+  }
+  .form-success svg{width:48px;height:48px;stroke:var(--green);fill:none;margin:0 auto 1rem;display:block;}
+  @media(max-width:560px){.form-row{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -420,16 +510,17 @@
 <div class="topbar">✨ Slot terbatas minggu ini — chat sekarang biar <strong>nggak kehabisan jadwal!</strong></div>
 
 <header>
-  <div class="logo"><span class="mark"></span>Jipung Store</div>
+  <div class="logo"><img src="file_00000000264871f8864c9711d233ac95.png" alt="Logo Jipung Store" class="mark">Jipung Store</div>
   <nav>
     <ul>
       <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#tentang">Tentang</a></li>
       <li><a href="#kenapa">Kenapa Kami</a></li>
       <li><a href="#testimoni">Testimoni</a></li>
       <li><a href="#kontak">Kontak</a></li>
     </ul>
   </nav>
-  <a href="#kontak" class="btn-orange">Pesan via WhatsApp</a>
+  <a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="btn-orange">Pesan via WhatsApp</a>
   <button class="menu-toggle" aria-label="Buka menu">&#9776;</button>
 </header>
 
@@ -438,7 +529,7 @@
   <h1>Satu tempat untuk karya visualmu, <span class="accent">sampai isi hatimu.</span></h1>
   <p class="lead">Logo, foto, video, preset Alight Motion, website — sampai teman curhat dan pendampingan healing. Semua kebutuhan kamu, kami bantu dengan sepenuh hati.</p>
   <div class="hero-ctas">
-    <a href="#kontak" class="btn-orange">Chat & Pesan Sekarang</a>
+    <a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="btn-orange">Chat & Pesan Sekarang</a>
     <a href="#layanan" class="btn-outline">Lihat Semua Layanan</a>
   </div>
   <div class="trust-row">
@@ -468,7 +559,7 @@
       <span class="eyebrow">Layanan Kami</span>
       <h2>Layanan Favorit Minggu Ini</h2>
     </div>
-    <a href="#kontak" class="see-all">Chat Sekarang →</a>
+    <a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="see-all">Chat Sekarang →</a>
   </div>
   <div class="services-grid">
     <div class="service-card reveal">
@@ -479,233 +570,4 @@
         <h3>Desain Logo</h3>
         <p>Logo custom untuk brand atau personal kamu, lengkap file siap pakai.</p>
         <div class="card-foot">
-          <span class="price">Rp 50.000<small>mulai dari</small></span>
-          <a href="#kontak" class="mini-order">Pesan</a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card reveal">
-      <div class="card-media" style="background:linear-gradient(135deg,#FF7A45,#FFB07A);">
-        <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7 L10 4 h4 l2 3"/><circle cx="12" cy="13.5" r="3.2"/></svg>
-      </div>
-      <div class="card-body">
-        <h3>Jasa Foto</h3>
-        <p>Sesi foto produk, potret, atau konten media sosial dengan hasil rapi.</p>
-        <div class="card-foot">
-          <span class="price">Rp 100.000<small>mulai dari</small></span>
-          <a href="#kontak" class="mini-order">Pesan</a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card reveal">
-      <div class="card-media" style="background:linear-gradient(135deg,#22C55E,#6EE7A0);">
-        <svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M17 10 L21 8 v8 l-4 -2 Z"/></svg>
-      </div>
-      <div class="card-body">
-        <h3>Edit Video</h3>
-        <p>Editing video konten sosmed, dokumentasi, atau promosi — enak ditonton.</p>
-        <div class="card-foot">
-          <span class="price">Rp 75.000<small>mulai dari</small></span>
-          <a href="#kontak" class="mini-order">Pesan</a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card reveal">
-      <div class="card-media" style="background:linear-gradient(135deg,#A855F7,#D6A6FF);">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8 L16 12 L10 16 Z"/></svg>
-      </div>
-      <div class="card-body">
-        <h3>Preset Alight Motion</h3>
-        <p>Preset siap pakai, transisi dan color grading yang aesthetic.</p>
-        <div class="card-foot">
-          <span class="price">Rp 15.000<small>mulai dari</small></span>
-          <a href="#kontak" class="mini-order">Pesan</a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card reveal">
-      <div class="card-media" style="background:linear-gradient(135deg,#F472B6,#FCA5D2);">
-        <svg viewBox="0 0 24 24"><path d="M4 5 h16 v10 H9 l-4 4 V15 H4 Z"/></svg>
-      </div>
-      <div class="card-body">
-        <h3>Jasa Teman Curhat</h3>
-        <p>Ruang cerita tanpa dihakimi, ngobrol santai kapan aja kamu butuh.</p>
-        <div class="card-foot">
-          <span class="price">Rp 25.000<small>per sesi</small></span>
-          <a href="#kontak" class="mini-order">Pesan</a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card reveal">
-      <div class="card-media" style="background:linear-gradient(135deg,#0EA5E9,#7DD3FC);">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M4 20 c1 -5 5 -7 8 -7 s7 2 8 7"/></svg>
-      </div>
-      <div class="card-body">
-        <h3>Pendampingan Healing & Liburan</h3>
-        <p>Teman jalan buat healing atau liburan, biar nggak sendirian.</p>
-        <div class="card-foot">
-          <span class="price">Nego<small>sesuai lokasi</small></span>
-          <a href="#kontak" class="mini-order">Pesan</a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card reveal">
-      <div class="card-media" style="background:linear-gradient(135deg,#14B8A6,#5EEAD4);">
-        <svg viewBox="0 0 24 24"><path d="M8 8 L4 12 L8 16"/><path d="M16 8 L20 12 L16 16"/><path d="M13 6 L11 18"/></svg>
-      </div>
-      <div class="card-body">
-        <h3>Jasa Pembuatan Website</h3>
-        <p>Website portofolio, toko online, atau landing page, siap online.</p>
-        <div class="card-foot">
-          <span class="price">Rp 150.000<small>mulai dari</small></span>
-          <a href="#kontak" class="mini-order">Pesan</a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card reveal" style="justify-content:center; align-items:center; text-align:center; padding:2rem;">
-      <div class="card-body" style="align-items:center;">
-        <h3>Nggak nemu yang kamu cari?</h3>
-        <p>Chat aja, siapa tahu bisa kami bantu juga.</p>
-        <a href="#kontak" class="btn-orange" style="margin-top:0.6rem;">Tanya Dulu</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="why-section" id="kenapa">
-  <div class="section-head reveal" style="justify-content:center; text-align:center; flex-direction:column; align-items:center;">
-    <span class="eyebrow">Kenapa Harus Kami</span>
-    <h2>Dipercaya karena kualitas & ketulusan</h2>
-  </div>
-  <div class="why-grid">
-    <div class="why-card reveal">
-      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2 L21 6 v6 c0 5 -4 8 -9 10 c-5 -2 -9 -5 -9 -10 V6 Z"/></svg></div>
-      <div><h3>Privasi Terjaga</h3><p>Khusus jasa curhat & healing, ceritamu aman dan tidak kami sebar.</p></div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12 l3 3 l6 -7"/></svg></div>
-      <div><h3>Hasil Berkualitas</h3><p>Setiap pesanan dikerjakan teliti sampai kamu puas dengan hasilnya.</p></div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7 v5 l3.5 2"/></svg></div>
-      <div><h3>Respon Cepat</h3><p>Chat kamu dibalas maksimal 1x24 jam, seringnya jauh lebih cepat.</p></div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M3 12 h18 M3 12 c0 -5 4 -9 9 -9 s9 4 9 9 M3 12 c0 5 4 9 9 9 s9 -4 9 -9"/></svg></div>
-      <div><h3>Harga Bersahabat</h3><p>Tarif jelas dari awal, tanpa biaya tersembunyi di tengah jalan.</p></div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M9 11 l3 3 l8 -8"/><path d="M20 12 v6 a2 2 0 0 1 -2 2 H6 a2 2 0 0 1 -2 -2 V6 a2 2 0 0 1 2 -2 h10"/></svg></div>
-      <div><h3>Konsultasi Gratis</h3><p>Diskusi kebutuhan dulu sebelum deal, nggak ada paksaan order.</p></div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M4 4 h16 v12 H8 l-4 4 Z"/></svg></div>
-      <div><h3>Revisi Fleksibel</h3><p>Belum sreg? Bisa revisi sampai hasilnya sesuai keinginan kamu.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="testimoni">
-  <div class="section-head reveal" style="justify-content:center; text-align:center; flex-direction:column; align-items:center;">
-    <span class="eyebrow">Testimoni</span>
-    <h2>Jadilah Klien Pertama Kami</h2>
-  </div>
-  <div class="testi-card reveal" style="max-width:560px; margin:0 auto; text-align:center;">
-    <p style="margin-top:0;">Jipung Store baru mulai melayani, jadi belum ada testimoni untuk ditampilkan di sini — dan kami nggak mau pasang testimoni palsu cuma biar kelihatan ramai.</p>
-    <p>Kalau kamu order sekarang, ceritamu bisa jadi testimoni pertama di sini (dengan izin kamu tentunya).</p>
-    <a href="#kontak" class="btn-orange" style="margin-top:0.6rem;">Jadi Klien Pertama</a>
-  </div>
-</section>
-
-<section>
-  <div class="cta-banner reveal">
-    <h2>Mulai konsultasi gratis sekarang</h2>
-    <p>Ceritain kebutuhan kamu — mau proyek desain atau sekadar butuh teman cerita, kami siap dengar.</p>
-    <a href="#kontak" class="btn-orange" style="background:#fff; color:var(--blue-deep); box-shadow:none;">Chat via WhatsApp</a>
-  </div>
-</section>
-
-<section id="portofolio">
-  <div class="section-head reveal">
-    <div><span class="eyebrow">Contoh Gaya Kerja</span><h2>Gambaran Hasil yang Bisa Kamu Dapat</h2></div>
-  </div>
-  <p class="reveal" style="color:var(--ink-dim); margin-top:-1.5rem; margin-bottom:2rem; max-width:60ch;">Ini contoh gaya/mockup untuk menggambarkan jenis hasil kerja tiap layanan — bukan daftar order klien asli. Portofolio nyata akan kami tambahkan setelah ada hasil kerja pertama.</p>
-  <div class="portfolio-list reveal">
-    <div class="portfolio-row">
-      <span class="portfolio-thumb"></span>
-      <div><h4>Contoh gaya: Logo brand minimalis</h4><span class="tag">Desain Logo</span></div>
-      <span class="date">Mockup</span>
-    </div>
-    <div class="portfolio-row">
-      <span class="portfolio-thumb" style="background:linear-gradient(135deg,#FF7A45,#FFB07A);"></span>
-      <div><h4>Contoh gaya: Foto produk untuk sosmed</h4><span class="tag">Jasa Foto</span></div>
-      <span class="date">Mockup</span>
-    </div>
-    <div class="portfolio-row">
-      <span class="portfolio-thumb" style="background:linear-gradient(135deg,#22C55E,#6EE7A0);"></span>
-      <div><h4>Contoh gaya: Video promosi singkat</h4><span class="tag">Edit Video</span></div>
-      <span class="date">Mockup</span>
-    </div>
-    <div class="portfolio-row">
-      <span class="portfolio-thumb" style="background:linear-gradient(135deg,#14B8A6,#5EEAD4);"></span>
-      <div><h4>Contoh gaya: Website portofolio sederhana</h4><span class="tag">Pembuatan Website</span></div>
-      <span class="date">Mockup</span>
-    </div>
-  </div>
-</section>
-
-<footer id="kontak">
-  <div class="footer-grid">
-    <div>
-      <div class="logo"><span class="mark"></span>Jipung Store</div>
-      <p>Satu tempat untuk kebutuhan desain, konten, website — sampai ruang cerita dan healing kamu. Chat kapan aja, kami dengar.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Layanan</h4>
-      <ul>
-        <li><a href="#layanan">Desain Logo</a></li>
-        <li><a href="#layanan">Jasa Foto & Video</a></li>
-        <li><a href="#layanan">Preset Alight Motion</a></li>
-        <li><a href="#layanan">Pembuatan Website</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Personal</h4>
-      <ul>
-        <li><a href="#layanan">Jasa Teman Curhat</a></li>
-        <li><a href="#layanan">Pendampingan Healing</a></li>
-        <li><a href="#testimoni">Testimoni</a></li>
-        <li><a href="#kenapa">Kenapa Kami</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Kontak</h4>
-      <ul>
-        <li>WhatsApp: 08xx-xxxx-xxxx</li>
-        <li>Email: halo@jipungstore.id</li>
-        <li>Instagram: @jipungstore</li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Jipung Store.</span>
-    <span>Dibuat dengan ❤️ untuk kamu yang butuh karya & teman cerita.</span>
-  </div>
-</footer>
-
-<a href="#" class="wa-float" aria-label="Chat WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.3c-.2.6-1.3 1.2-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.8-4.2-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.5 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.5.2.5.3.1.2.1.6-.1 1.2z"/></svg>
-</a>
-
-<script>
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, {threshold:0.12});
-  revealEls.forEach(el=>io.observe(el));
-</script>
-
-</body>
-</html>
+          <span class="price">R
