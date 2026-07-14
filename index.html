@@ -409,11 +409,14 @@
     nav ul{display:none;}
     .menu-toggle{display:block;}
     .services-grid, .why-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
     section{padding:4.5rem 6vw;}
     .cta-banner{margin:0 6vw; padding:2.6rem 1.6rem;}
     .footer-grid{grid-template-columns:1fr;}
     .portfolio-row{grid-template-columns:54px 1fr; row-gap:0.3rem;}
-    .portfolio-row .date{grid-column:2; }
+    .portfolio-row .date{grid-column:2;}
+    .form-row{grid-template-columns:1fr;}
+    .inner-hero{margin:0 0 1rem; border-radius:0;}
   }
 
   /* ---------- MERGED SECTIONS (Tentang / Kontak / Privasi) ---------- */
@@ -440,11 +443,11 @@
   .value-card h4{font-size:1.02rem; margin-bottom:0.5rem; font-family:'Sora',sans-serif;}
   .value-card p{color:var(--ink-dim); font-size:0.87rem;}
 
-  .contact-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:1000px; margin:0 auto 3rem;}
-  .contact-card{background:#fff; border:1px solid var(--border); border-radius:16px; padding:2rem; text-align:center; box-shadow:var(--shadow);}
+  .contact-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; max-width:700px; margin:0 auto 3rem;}
+  .contact-card{background:#fff; border:1px solid var(--border); border-radius:16px; padding:1.6rem; text-align:center; box-shadow:var(--shadow); word-break:break-word;}
   .contact-card .why-icon{margin:0 auto 1rem;}
   .contact-card h4{font-size:1.02rem; margin-bottom:0.4rem; font-family:'Sora',sans-serif;}
-  .contact-card p{color:var(--ink-dim); font-size:0.87rem; margin-bottom:1rem;}
+  .contact-card p{color:var(--ink-dim); font-size:0.87rem; margin-bottom:1rem; line-height:1.5;}
 
   .founder-block{
     max-width:760px; margin:0 auto 3.5rem; background:#fff; border:1px solid var(--border);
@@ -507,7 +510,6 @@
 </head>
 <body>
 
-<div class="topbar">✨ Slot terbatas minggu ini — chat sekarang biar <strong>nggak kehabisan jadwal!</strong></div>
 
 <header>
   <div class="logo"><img src="file_00000000264871f8864c9711d233ac95.png" alt="Logo Jipung Store" class="mark">Jipung Store</div>
@@ -569,10 +571,7 @@
       <div class="card-body">
         <h3>Desain Logo</h3>
         <p>Logo custom untuk brand atau personal kamu, lengkap file siap pakai.</p>
-        <div class="card-foot">
-          <span class="price">Rp 50.000<small>mulai dari</small></span>
-          <a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a>
-        </div>
+        <div class="card-foot"><a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a></div>
       </div>
     </div>
     <div class="service-card reveal">
@@ -582,10 +581,7 @@
       <div class="card-body">
         <h3>Jasa Foto</h3>
         <p>Sesi foto produk, potret, atau konten media sosial dengan hasil rapi.</p>
-        <div class="card-foot">
-          <span class="price">Rp 100.000<small>mulai dari</small></span>
-          <a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a>
-        </div>
+        <div class="card-foot"><a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a></div>
       </div>
     </div>
     <div class="service-card reveal">
@@ -595,10 +591,7 @@
       <div class="card-body">
         <h3>Edit Video</h3>
         <p>Editing video konten sosmed, dokumentasi, atau promosi — enak ditonton.</p>
-        <div class="card-foot">
-          <span class="price">Rp 75.000<small>mulai dari</small></span>
-          <a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a>
-        </div>
+        <div class="card-foot"><a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a></div>
       </div>
     </div>
     <div class="service-card reveal">
@@ -608,10 +601,7 @@
       <div class="card-body">
         <h3>Preset Alight Motion</h3>
         <p>Preset siap pakai, transisi dan color grading yang aesthetic.</p>
-        <div class="card-foot">
-          <span class="price">Rp 15.000<small>mulai dari</small></span>
-          <a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a>
-        </div>
+        <div class="card-foot"><a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a></div>
       </div>
     </div>
     <div class="service-card reveal">
@@ -621,10 +611,7 @@
       <div class="card-body">
         <h3>Jasa Teman Curhat</h3>
         <p>Ruang cerita tanpa dihakimi, ngobrol santai kapan aja kamu butuh.</p>
-        <div class="card-foot">
-          <span class="price">Rp 25.000<small>per sesi</small></span>
-          <a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a>
-        </div>
+        <div class="card-foot"><a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a></div>
       </div>
     </div>
     <div class="service-card reveal">
@@ -634,12 +621,8 @@
       <div class="card-body">
         <h3>Pendampingan Healing & Liburan</h3>
         <p>Teman jalan buat healing atau liburan, biar nggak sendirian.</p>
-        <div class="card-foot">
-          <span class="price">Nego<small>sesuai lokasi</small></span>
-          <a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a>
         </div>
       </div>
-    </div>
     <div class="service-card reveal">
       <div class="card-media" style="background:linear-gradient(135deg,#14B8A6,#5EEAD4);">
         <svg viewBox="0 0 24 24"><path d="M8 8 L4 12 L8 16"/><path d="M16 8 L20 12 L16 16"/><path d="M13 6 L11 18"/></svg>
@@ -647,10 +630,7 @@
       <div class="card-body">
         <h3>Jasa Pembuatan Website</h3>
         <p>Website portofolio, toko online, atau landing page, siap online.</p>
-        <div class="card-foot">
-          <span class="price">Rp 150.000<small>mulai dari</small></span>
-          <a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a>
-        </div>
+        <div class="card-foot"><a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener" class="mini-order">Pesan</a></div>
       </div>
     </div>
     <div class="service-card reveal" style="justify-content:center; align-items:center; text-align:center; padding:2rem;">
@@ -716,34 +696,7 @@
   </div>
 </section>
 
-<section id="portofolio">
-  <div class="section-head reveal">
-    <div><span class="eyebrow">Contoh Gaya Kerja</span><h2>Gambaran Hasil yang Bisa Kamu Dapat</h2></div>
-  </div>
-  <p class="reveal" style="color:var(--ink-dim); margin-top:-1.5rem; margin-bottom:2rem; max-width:60ch;">Ini contoh gaya/mockup untuk menggambarkan jenis hasil kerja tiap layanan — bukan daftar order klien asli. Portofolio nyata akan kami tambahkan setelah ada hasil kerja pertama.</p>
-  <div class="portfolio-list reveal">
-    <div class="portfolio-row">
-      <span class="portfolio-thumb"></span>
-      <div><h4>Contoh gaya: Logo brand minimalis</h4><span class="tag">Desain Logo</span></div>
-      <span class="date">Mockup</span>
-    </div>
-    <div class="portfolio-row">
-      <span class="portfolio-thumb" style="background:linear-gradient(135deg,#FF7A45,#FFB07A);"></span>
-      <div><h4>Contoh gaya: Foto produk untuk sosmed</h4><span class="tag">Jasa Foto</span></div>
-      <span class="date">Mockup</span>
-    </div>
-    <div class="portfolio-row">
-      <span class="portfolio-thumb" style="background:linear-gradient(135deg,#22C55E,#6EE7A0);"></span>
-      <div><h4>Contoh gaya: Video promosi singkat</h4><span class="tag">Edit Video</span></div>
-      <span class="date">Mockup</span>
-    </div>
-    <div class="portfolio-row">
-      <span class="portfolio-thumb" style="background:linear-gradient(135deg,#14B8A6,#5EEAD4);"></span>
-      <div><h4>Contoh gaya: Website portofolio sederhana</h4><span class="tag">Pembuatan Website</span></div>
-      <span class="date">Mockup</span>
-    </div>
-  </div>
-</section>
+
 
 <section id="tentang">
   <div class="inner-hero reveal">
@@ -822,15 +775,6 @@
       <p>Cocok kalau kamu ingin menjelaskan kebutuhan secara detail, mengirim referensi file, atau untuk keperluan kerja sama jangka panjang dengan Jipung Store.</p>
       <a href="mailto:adrianskuy17@gmail.com" class="btn-outline">adrianskuy17@gmail.com</a>
     </div>
-    <div class="contact-card reveal">
-      <div class="why-icon" style="margin:0 auto 1rem;">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-      </div>
-      <h4>Instagram</h4>
-      <p>Tempat kami membagikan contoh gaya kerja, update layanan terbaru, dan sedikit cerita di balik proses pengerjaan pesanan klien kami.</p>
-      <a href="https://instagram.com/jipungstore" target="_blank" rel="noopener" class="btn-outline">@jipungstore</a>
-    </div>
-  </div>
 
   <div class="prose reveal" style="text-align:center;">
     <h3 style="margin-top:0;">Jam Layanan</h3>
@@ -849,7 +793,7 @@
   <p class="update-date reveal">Terakhir diperbarui: 13 Juli 2026</p>
   <div class="prose reveal">
     <h3>Informasi yang Kami Kumpulkan</h3>
-    <p>Saat kamu menghubungi kami lewat WhatsApp, email, atau Instagram, kami menerima informasi yang kamu berikan secara langsung — seperti nama, kontak, isi pesan, referensi desain, dan detail kebutuhan layananmu. Situs ini bersifat statis dan tidak memasang sistem pelacakan otomatis, cookie pihak ketiga, atau formulir yang mengirim data ke server kami; seluruh komunikasi terjadi lewat platform pihak ketiga (WhatsApp, email, Instagram) yang kamu pilih sendiri.</p>
+    <p>Saat kamu menghubungi kami lewat WhatsApp atau email, kami menerima informasi yang kamu berikan secara langsung — seperti nama, kontak, isi pesan, referensi desain, dan detail kebutuhan layananmu. Situs ini bersifat statis dan tidak memasang sistem pelacakan otomatis, cookie pihak ketiga, atau formulir yang mengirim data ke server kami; seluruh komunikasi terjadi lewat platform pihak ketiga (WhatsApp, email) yang kamu pilih sendiri.</p>
 
     <h3>Bagaimana Kami Menggunakannya</h3>
     <ul>
@@ -865,7 +809,7 @@
     <p>Data dan percakapanmu hanya diakses oleh pengelola Jipung Store yang menangani pesananmu secara langsung. Kami tidak membagikan, menjual, atau menyewakan data pribadimu ke pihak ketiga mana pun untuk kepentingan pemasaran, kecuali memang diwajibkan oleh hukum yang berlaku di Indonesia.</p>
 
     <h3>Penyimpanan & Keamanan</h3>
-    <p>Karena komunikasi kita berlangsung lewat WhatsApp, email, dan Instagram, percakapanmu tersimpan mengikuti kebijakan privasi dan sistem keamanan masing-masing platform tersebut. Di sisi kami, kami berusaha menjaga akses ke perangkat dan akun yang digunakan untuk melayani chat kamu seaman mungkin, termasuk tidak membiarkan pihak lain yang tidak berkepentingan mengakses percakapan tersebut.</p>
+    <p>Karena komunikasi kita berlangsung lewat WhatsApp dan email, percakapanmu tersimpan mengikuti kebijakan privasi dan sistem keamanan masing-masing platform tersebut. Di sisi kami, kami berusaha menjaga akses ke perangkat dan akun yang digunakan untuk melayani chat kamu seaman mungkin, termasuk tidak membiarkan pihak lain yang tidak berkepentingan mengakses percakapan tersebut.</p>
 
     <h3>Hak Kamu Sebagai Klien</h3>
     <ul>
@@ -911,13 +855,12 @@
       <ul>
         <li><a href="https://wa.me/6285134662506?text=Saya%20ingin%20membeli%20salah%20satu%20jasa%20anda" target="_blank" rel="noopener">WhatsApp: +62 851-3466-2506</a></li>
         <li><a href="mailto:adrianskuy17@gmail.com">Email: adrianskuy17@gmail.com</a></li>
-        <li>Instagram: @jipungstore</li>
         <li><a href="#privasi">Kebijakan Privasi</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Jipung Store. Situs demo.</span>
+    <span>© 2026 Jipung Store.</span>
     <span>Dibuat dengan ❤️ untuk kamu yang butuh karya & teman cerita.</span>
   </div>
 </footer>
