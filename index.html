@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  
   :root{
     --bg:#FFFFFF;
     --bg-soft:#F4F7FC;
@@ -506,10 +507,95 @@
   }
   .form-success svg{width:48px;height:48px;stroke:var(--green);fill:none;margin:0 auto 1rem;display:block;}
   @media(max-width:560px){.form-row{grid-template-columns:1fr;}}
+
+  #chat {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 25px;
+  
+  /* Efek Glass */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+#pesan {
+  width: 70%;
+  padding: 13px;
+  
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.4);
+  outline: none;
+}
+
+button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 12px;
+  
+  background: linear-gradient(135deg,#25D366,#128C7E);
+  color: white;
+  cursor: pointer;
+  
+  box-shadow: 0 5px 15px rgba(37,211,102,0.4);
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+#jawaban {
+  margin-top: 18px;
+  padding: 15px;
+  
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
 </style>
 </head>
 <body>
 
+  <div id="chat">
+  <input type="text" id="pesan" placeholder="Tulis pertanyaan...">
+  <button onclick="tanyaAI()">Kirim</button>
+  <div id="jawaban"></div>
+</div>
+
+<script>
+async function tanyaAI() {
+  const pesan = document.getElementById("pesan").value;
+
+  const response = await fetch(
+    "https://black-cell-7085.adrianskuy17.workers.dev/",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        message: pesan
+      })
+    }
+  );
+
+  const data = await response.json();
+
+  document.getElementById("jawaban").innerText =
+    data.candidates?.[0]?.content?.parts?.[0]?.text || "Tidak ada jawaban";
+}
+</script>
 
 <header>
   <div class="logo"><img src="file_00000000264871f8864c9711d233ac95.png" alt="Logo Jipung Store" class="mark">Jipung Store</div>
