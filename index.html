@@ -567,12 +567,6 @@ button:hover {
 </head>
 <body>
   
-  <div id="chat">
-  <input type="text" id="pesan" placeholder="Tulis pertanyaan...">
-  <button onclick="tanyaAI()">Kirim</button>
-  <div id="jawaban"></div>
-</div>
-
 <script>
 async function tanyaAI() {
   const pesan = document.getElementById("pesan").value;
@@ -990,10 +984,8 @@ if(saranForm){
       btn.disabled = false;
     }
   });
-}
-
+  }
 </script>
   
-}
 </body>
 </html>
